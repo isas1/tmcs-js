@@ -6,6 +6,7 @@
   --sec: #F7B733;
   --grey: #DFDCE3;
   --font: #333;
+  --pink: #fa6484;
 }
 
 /* Colour fonts added */
@@ -19,10 +20,12 @@
   src: url('fonts/NTBixa-Color.otf');
 }
 
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
 html {
   background-color: var(--bg);
   color: var(--font);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Open sans', sans-serif;
 }
 
 /* Reset styles to avoid browser defaults */
@@ -30,28 +33,38 @@ body {
   margin: 0;
 }
 
+/* https://unsplash.com/photos/5fNmWej4tAA */
 header {
   text-align: center;
-  height:50vh;
-  background:url(http://wes.io/iEgP/wow-so-deep.jpg) bottom center no-repeat;
-  background-size:cover;
-  display:flex;
-  align-items:center;
+  height: 40vh;
+  background-image: url(../media/header-bg-learning2.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
-header > h1 {
-  color:white;
+header>h1 {
+  color: white;
   font-size: 7vw;
-  text-shadow: 3px 4px 0 rgba(0,0,0,0.2)
+  text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.2)
+}
+
+@media all and (max-width: 600px) {
+  header {
+    background-image: url(../media/header-bg-learning.jpg);
+  }
+  header>h1 {
+    background-color: rgba(51, 51, 51,0.3);
+  }
 }
 
 /** STICK NAV **/
 nav {
-  background:black;
-  top:0;
+  background: black;
+  top: 0;
   width: 100%;
-  transition:all 0.5s;
+  transition: all 0.5s;
   position: relative;
   z-index: 1;
 }
@@ -59,18 +72,18 @@ nav {
 /* Added when scrollY >= nav.offsetTop */
 body.fixed-nav nav {
   position: fixed;
-  box-shadow:0 5px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
   margin: 0;
-  padding:0;
+  padding: 0;
   list-style: none;
-  display:flex;
+  display: flex;
 }
 
 nav li {
-  flex:1;
+  flex: 1;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -82,7 +95,7 @@ nav li a:hover {
 }
 
 li.logo {
-  max-width:0;
+  max-width: 0;
   overflow: hidden;
   background: white;
   transition: all 0.5s;
@@ -91,18 +104,18 @@ li.logo {
 }
 
 li.logo a {
-  color:black;
+  color: black;
 }
 
 .fixed-nav li.logo {
-  max-width:500px;
+  max-width: 500px;
 }
 
 nav a {
   text-decoration: none;
-  padding:20px;
+  padding: 20px;
   display: inline-block;
-  color:white;
+  color: white;
   transition: all 0.2s;
   text-transform: uppercase;
 }
@@ -110,15 +123,15 @@ nav a {
 /* class added  */
 .highlight {
   transition: all 0.3s;
-  border-bottom:2px solid rgba(0,0,0,0.1);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   position: absolute;
-  top:0;
-  background:rgba(255,255,255,0.2);
-  left:0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.2);
+  left: 0;
   z-index: 1;
-  border-radius:20px;
+  border-radius: 20px;
   display: block;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   pointer-events: none;
 }
 
@@ -131,21 +144,17 @@ nav a {
 
 h1 {
   text-align: center;
-  font-family: 'Gilbert';
-}
-
-h2 {
-  font-family: 'Bixa';
 }
 
 section {
   padding: 0px 10%;
 }
+
 img#logo {
   opacity: 1;
   border: none;
   box-shadow: none;
-  transform:translateX(0%) scale(1);
+  transform: translateX(0%) scale(1);
   width: 2em;
   height: 2em;
 }
@@ -157,15 +166,15 @@ img#logo:hover {
 
 img {
   border: 1px solid var(--sec);
-  opacity:1;
-  transition:all .5s;
+  opacity: 1;
+  transition: all .5s;
   box-shadow: 5px 10px var(--sec);
   /* transform:translateX(-30%) scale(0.95); add back if adding sliding transition */
 }
 
 img.active {
-  opacity:1;
-  transform:translateX(0%) scale(1);
+  opacity: 1;
+  transform: translateX(0%) scale(1);
 }
 
 footer {
@@ -189,7 +198,7 @@ footer {
     font-size: 12px;
   }
 
-  .panel > * {
+  .panel>* {
     flex-direction: row;
   }
 }
@@ -222,53 +231,69 @@ footer {
 }
 
 
-.panel1 { background-image: url(https://source.unsplash.com/6GPBVYLapYQ/1500x1500); }
-.panel2 { background-image: url(https://source.unsplash.com/nhi3_11E6zM/1500x1500); }
-.panel3 { background-image: url(https://source.unsplash.com/h7dl6upIOOs/1500x1500); }
-.panel4 { background-image: url(https://source.unsplash.com/5p1GMMv4XTI/1500x1500); }
-.panel5 { background-image: url(https://source.unsplash.com/70Rir5vB96U/1500x1500); }
+.panel1 {
+  background-image: url(https://source.unsplash.com/6GPBVYLapYQ/1500x1500);
+}
+
+.panel2 {
+  background-image: url(https://source.unsplash.com/nhi3_11E6zM/1500x1500);
+}
+
+.panel3 {
+  background-image: url(https://source.unsplash.com/h7dl6upIOOs/1500x1500);
+}
+
+.panel4 {
+  background-image: url(https://source.unsplash.com/5p1GMMv4XTI/1500x1500);
+}
+
+.panel5 {
+  background-image: url(https://source.unsplash.com/70Rir5vB96U/1500x1500);
+}
 
 /* Flex items */
-.panel > * {
-margin: 0;
-width: 100%;
-transition: transform 0.5s;
-flex: 1 0 auto;
-display: flex;
-justify-content: center;
-align-items: center;
+.panel>* {
+  margin: 0;
+  width: 100%;
+  transition: transform 0.5s;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.panel > *:first-child {
-transform:translateY(-100%)
-}
-.panel.open-active > *:first-child {
-transform:translateY(0)
+.panel>*:first-child {
+  transform: translateY(-100%)
 }
 
-.panel > *:last-child {
-transform:translateY(150px)
+.panel.open-active>*:first-child {
+  transform: translateY(0)
 }
-.panel.open-active > *:last-child {
-transform:translateY(0)
+
+.panel>*:last-child {
+  transform: translateY(150px)
+}
+
+.panel.open-active>*:last-child {
+  transform: translateY(0)
 }
 
 .panel p {
-text-transform: uppercase;
-font-family: 'Amatic SC', cursive;
-text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
-font-size: 2em;
+  text-transform: uppercase;
+  font-family: 'Amatic SC', cursive;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+  font-size: 2em;
 }
 
 .panel p:nth-child(2) {
-font-size: 4em;
+  font-size: 4em;
 }
 
 .panel.open {
-font-size: 20px;
-flex: 3;
+  font-size: 20px;
+  flex: 3;
 }
 
 .content {
-flex: 1;
+  flex: 1;
 }
