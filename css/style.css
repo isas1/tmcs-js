@@ -1,4 +1,4 @@
-:root {
+:root { /* CSS variables */
   --bg: #fff;
   --main: #FC4A1A;
   --link: #0b0b8f;
@@ -7,20 +7,10 @@
   --grey: #DFDCE3;
   --font: #333;
   --pink: #fa6484;
+  --glow-full: rgba(250, 100, 132, 1);
+  --glow-semi: rgba(250, 100, 132, 0.7);
+  --glow-min: rgba(250, 100, 132, 0.5);
 }
-
-/* Colour fonts added */
-@font-face {
-  font-family: 'Gilbert';
-  src: url('fonts/Gilbert-Color Bold-Preview_1004.otf');
-}
-
-@font-face {
-  font-family: 'Bixa';
-  src: url('fonts/NTBixa-Color.otf');
-}
-
-@import url('https://fonts.googleapis.com/css?family=Oswald');
 
 html {
   background-color: var(--bg);
@@ -31,32 +21,6 @@ html {
 /* Reset styles to avoid browser defaults */
 body {
   margin: 0;
-}
-
-/* https://unsplash.com/photos/5fNmWej4tAA */
-header {
-  text-align: center;
-  height: 40vh;
-  background-image: url(../media/header-bg-learning2.jpg);
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-header>h1 {
-  color: white;
-  font-size: 7vw;
-  text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.2)
-}
-
-@media all and (max-width: 600px) {
-  header {
-    background-image: url(../media/header-bg-learning.jpg);
-  }
-  header>h1 {
-    background-color: rgba(51, 51, 51,0.3);
-  }
 }
 
 /** STICK NAV **/
@@ -112,7 +76,7 @@ li.logo a {
 }
 
 nav a {
-  text-decoration: none;
+  text-decoration: none; /* Allows click through hovering box */
   padding: 20px;
   display: inline-block;
   color: white;
@@ -120,7 +84,7 @@ nav a {
   text-transform: uppercase;
 }
 
-/* class added  */
+/* Cursor following highligh class added on <a> hover  */
 .highlight {
   transition: all 0.3s;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
@@ -142,8 +106,51 @@ nav a {
   position: relative;
 }
 
+iframe {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: var(--pink) 0.01px solid;
+}
+
+/* Glow */
+
 h1 {
   text-align: center;
+  color: var(--pink);
+  text-decoration: underline;
+}
+
+h2 {
+  color: var(--pink);
+}
+
+.glow {
+  animation: glow 3s;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px var(--glow-full);
+  }
+
+  15% {
+    text-shadow: 2px 2px 10px var(--glow-full),
+      -2px -2px 10px var(--glow-full);
+  }
+
+  30% {
+    text-shadow: 2px 2px 4px var(--glow-semi),
+      -2px -2px 4px var(--glow-semi);
+  }
+
+  50% {
+    text-shadow: 20px 20px 50px var(--glow-min),
+      -20px -20px 50px var(--glow-min);
+  }
 }
 
 section {
