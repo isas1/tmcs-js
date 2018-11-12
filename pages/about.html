@@ -7,16 +7,53 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>My website</title>
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    :root {
+      --colour: rgb(0, 0, 0);
+      --glow-full: rgba(250, 100, 132, 1);
+      --glow-semi: rgba(250, 100, 132, 0.7);
+      --glow-min: rgba(250, 100, 132, 0.5);
+    }
+
+    h1 {
+      animation: glow 3s infinite;
+      color: #FFF;
+    }
+
+    h2 {
+      color: var(--glow-full);
+    }
+
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 10px var(--glow-full);
+      }
+
+      15% {
+        text-shadow: 2px 2px 10px var(--glow-full),
+          -2px -2px 10px var(--glow-full);
+      }
+
+      30% {
+        text-shadow: 2px 2px 4px var(--glow-semi),
+          -2px -2px 4px var(--glow-semi);
+      }
+
+      50% {
+        text-shadow: 20px 20px 50px var(--glow-min),
+          -20px -20px 50px var(--glow-min);
+      }
+    }
+  </style>
 </head>
 
 <body>
 
   <nav>
     <ul>
-      <li class="logo"><a href="#"><img id="logo" width="40" height="40" src="../media/cslogo.png" alt="CS Logo"></a></li>
+      <li class="logo"><a href="../index.html"><img id="logo" width="40" height="40" src="../media/cslogo.png" alt="CS Logo"></a></li>
       <li><a href="../index.html">Home</a></li>
-      <!-- <li><a href="about.html">About</a></li> -->
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="mailto:teachmecomputerscience@gmail.com">Email</a></li>
     </ul>
   </nav>
 
@@ -49,7 +86,7 @@
       required; others are less structured to enable development of independent skills, such as problem-solving,
       resilience to adversity or searching for the correct code modules to incorporate into a program. All of these are
       crucial components in enabling students to become good programmers and problem solvers.</p>
-    <img class="pic" src="../media/sports.jpeg" alt="Is the link correct?">
+
   </section>
 
   <!--Add a footer-->
