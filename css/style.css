@@ -117,6 +117,7 @@ iframe {
   padding-left: 10px;
   padding-right: 10px;
   border: var(--pink) 0.01px solid;
+  box-shadow: 5px 10px 10px #888888;
 }
 
 /* Glow */
