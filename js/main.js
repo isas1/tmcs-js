@@ -6,13 +6,12 @@ const nav = document.querySelector('nav');
 const topOfNav = nav.offsetTop; // was let -eslint error
 const iframe = document.querySelector('iframe')
 
+if (iframe) {
+  iframe.blur();
+  nav.focus()
+}
+
 function fixNav() {
-  if (iframe) {
-    iframe.blur();
-  }
-  if (nav) {
-    nav.focus();
-  }
   if (window.scrollY >= topOfNav) {
     document.body.style.paddingTop = `${nav.offsetHeight}px`;
     document.body.classList.add('fixed-nav');
