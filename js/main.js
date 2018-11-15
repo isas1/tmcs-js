@@ -23,8 +23,10 @@ function fixNav() {
   if (window.scrollY >= topOfNav + 20) {
     document.body.style.paddingTop = `${nav.offsetHeight}px`;
     document.body.classList.add('fixed-nav');
+    nav.classList.add('nav-trans');
   } else {
     document.body.classList.remove('fixed-nav');
+    nav.classList.remove('nav-trans');
     document.body.style.paddingTop = 0;
   }
 }

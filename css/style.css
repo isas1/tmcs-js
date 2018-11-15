@@ -1,12 +1,11 @@
 :root { /* CSS variables */
   --bg: #fff;
-  --main: #FC4A1A;
+  --main: #fa6484;
   --link: #0b0b8f;
   --linkSec: rgba(247, 183, 51, 0.7);
   --sec: #ffb500;
   --grey: #DFDCE3;
   --font: #333;
-  --pink: #fa6484;
   --pink-hover: rgba(250, 100, 132, 0.7);
   --glow-full: rgba(250, 100, 132, 1);
   --glow-semi: rgba(250, 100, 132, 0.7);
@@ -34,12 +33,19 @@ body {
 
 /** STICK NAV **/
 nav {
-  background: black;
+  background: var(--font);
   top: 0;
   width: 100%;
   transition: all 0.5s;
   position: relative;
   z-index: 1;
+}
+
+/* added when scrolls down */
+.nav-trans {
+  opacity: 1;
+  background-color: var(--main);
+  color: #333;
 }
 
 /* Added when scrollY >= nav.offsetTop */
@@ -125,7 +131,7 @@ nav a {
   padding-bottom: 5vh;
   padding-left: 10px;
   padding-right: 10px;
-  border: var(--pink) 0.01px solid;
+  border: var(--main) 0.01px solid;
   box-shadow: 5px 10px 10px #888888;
   z-index: -1;
 } */
@@ -161,12 +167,16 @@ nav a {
 
 h1 {
   text-align: center;
-  color: var(--pink);
+  color: var(--main);
   text-decoration: underline;
 }
 
+h1.title {
+  color: white;
+}
+
 h2 {
-  color: var(--pink);
+  color: var(--main);
 }
 
 .glow {
@@ -195,10 +205,18 @@ h2 {
 }
 
 section {
-  padding: 0px 10%;
-  border: var(--grey) 0.1px solid;
-  background-color: rgba(0, 0, 0, 0.03);
-  margin: 20px;
+  padding: 10px 10%;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-info {
+  position: relative;
+  height: 100%;
+  background-image: linear-gradient(#ff9d2f, #ff6126);
+  border-bottom-left-radius: 50% 90%;
+  border-bottom-right-radius: 50% 90%;
 }
 
 img#logo {
@@ -228,12 +246,12 @@ img#logo {
   font-size: 18px;
   display: inline;
   text-align: center;
-  color: var(--sec);
+  color: white;
 }
 
-.price {
-  font-size: 1.5em;
-}
+/* .price {
+  font-size: 2em;
+} */
 
 .button-book, .button-mail {
   display: inline-block;
@@ -255,13 +273,13 @@ img#logo {
 }
 
 .button-book {
-  background-color: var(--pink);
+  background-color: var(--main);
   transition: background-color 0.5s ease;
   min-width: 175px;
 }
 
 .button-book:hover {
-  background-color: var(--pink-hover);
+  background-color: var(--main-hover);
 }
 
 .button-mail {
@@ -274,9 +292,11 @@ img.active {
 }
 
 footer {
-  background-color: var(--grey);
+  background-color: var(--font);
+  color: var(--grey);
   position: relative;
   text-align: right;
+  padding: 20px;
 }
 
 /* CSS BUTTON */
@@ -293,12 +313,22 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
-
 }
 
 /* a */
+
+@media all and (max-width: 599) {
+  effect1 {
+    -webkit-transform: scale(1);
+
+    -ms-transform: scale(1);
+
+    transform: scale(1); /*change scale(3) to scale(1)*/
+
+  }
+}
 .effect1 {
-  color: var(--pink);
+  color: var(--main);
   text-decoration: none;
   font-family: sans-serif;
   font-size: 24px;
@@ -311,11 +341,11 @@ footer {
 
   transition: all 0.5s;
 
-  -webkit-transform: scale(1);
+  -webkit-transform: scale(2);
 
-      -ms-transform: scale(1);
+      -ms-transform: scale(2);
 
-          transform: scale(1); /*change scale(3) to scale(1)*/
+          transform: scale(2); /*change scale(3) to scale(1)*/
 }
 
 .effect1-button-safari {
@@ -324,7 +354,7 @@ footer {
 }
 
 .effect1 .bg {
-  background: var(--pink);
+  background: var(--main);
   width: 30px;
   height: 2px;
   position: absolute;
@@ -359,7 +389,7 @@ footer {
   content: '';
   height: 2px;
   width: 10px;
-  background: var(--pink);
+  background: var(--main);
   position: absolute;
   right: -2px;      
   -webkit-transition: all 0.5s;      
