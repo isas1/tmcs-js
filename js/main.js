@@ -12,7 +12,7 @@ if (iframe) {
 }
 
 function fixNav() {
-  if (window.scrollY >= topOfNav) {
+  if (window.scrollY >= topOfNav + 20) {
     document.body.style.paddingTop = `${nav.offsetHeight}px`;
     document.body.classList.add('fixed-nav');
   } else {
@@ -27,8 +27,10 @@ window.addEventListener('scroll', fixNav);
 // ***** NAV HIGHLIGHT FOLLOW ***** //
 
 
-const triggers = document.querySelectorAll('a');
+const triggers = document.querySelectorAll('.a-nav');
 const highlight = document.createElement('span');
+
+console.log(triggers)
 
 
 function highlightLink() {
