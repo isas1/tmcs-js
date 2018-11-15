@@ -11,6 +11,7 @@
   --glow-semi: rgba(250, 100, 132, 0.7);
   --glow-min: rgba(250, 100, 132, 0.5);
   --button-mail: #4db24c;
+  --button-hover: #ffa4b8;
 }
 
 html {
@@ -214,9 +215,9 @@ section {
 .section-info {
   position: relative;
   height: 100%;
-  background-image: linear-gradient(#ff9d2f, #ff6126);
-  border-bottom-left-radius: 50% 90%;
-  border-bottom-right-radius: 50% 90%;
+  background-image: linear-gradient(#fa8ba1, var(--main));
+  border-bottom-left-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
 }
 
 img#logo {
@@ -247,6 +248,7 @@ img#logo {
   display: inline;
   text-align: center;
   color: white;
+  padding-bottom: 20px;
 }
 
 /* .price {
@@ -275,11 +277,13 @@ img#logo {
 .button-book {
   background-color: var(--main);
   transition: background-color 0.5s ease;
+
+
   min-width: 175px;
 }
 
 .button-book:hover {
-  background-color: var(--main-hover);
+  background-color: var(--button-mail);
 }
 
 .button-mail {
