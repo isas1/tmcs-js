@@ -1,6 +1,10 @@
 /*eslint no-console: "off"*/
 /*eslint quote-props: "off"*/
 
+// Browser detect
+
+var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+
 // ***** STICKY NAV ***** //
 const nav = document.querySelector('nav');
 const topOfNav = nav.offsetTop; // was let -eslint error
@@ -38,23 +42,42 @@ function highlightLink() {
     highlight.classList.add('highlight');
     document.body.append(highlight);
   }
-    const linkCoords = this.getBoundingClientRect();
-    const coords = {
-      height: linkCoords.height,
-      left: linkCoords.left + window.scrollX,
-      top: linkCoords.top + window.scrollY,
-      width: linkCoords.width
-    }
-    highlight.style.width = `${coords.width}px`;
-    highlight.style.height = `${coords.height}px`;
-    highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`
-    // console.log(linkCoords);
+  const linkCoords = this.getBoundingClientRect();
+  const coords = {
+    height: linkCoords.height,
+    left: linkCoords.left + window.scrollX,
+    top: linkCoords.top + window.scrollY,
+    width: linkCoords.width
   }
+  highlight.style.width = `${coords.width}px`;
+  highlight.style.height = `${coords.height}px`;
+  highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`
+  // console.log(linkCoords);
+}
 
-  function removeHighlight() {
-    highlight.classList.remove('highlight');
-    // console.log("Remove highlight here");
+function removeHighlight() {
+  highlight.classList.remove('highlight');
+  // console.log("Remove highlight here");
+}
+
+triggers.forEach(a => a.addEventListener("mouseenter", highlightLink));
+document.addEventListener("scroll", removeHighlight);
+
+// CSS animated button for desktop only
+
+(function() {
+
+  const cssButton = document.querySelector('#css-button')
+  const cssButtonLink = document.querySelector('#css-button a')
+  // your page initialization code here
+  // the DOM will be available here
+  if (window.innerWidth > 599 && !is_safari) {
+    cssButton.classList.add('css-button');
+    cssButtonLink.classList.add('effect1');
+  } else {
+    cssButton.classList.add('button-book')
+    cssButtonLink.classList.add('effect1-button-safari')
   }
-
-  triggers.forEach(a => a.addEventListener("mouseenter", highlightLink));
-  document.addEventListener("scroll", removeHighlight);
+  console.log(cssButton)
+  console.log(cssButtonLink)
+})();

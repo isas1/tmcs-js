@@ -7,6 +7,7 @@
   --grey: #DFDCE3;
   --font: #333;
   --pink: #fa6484;
+  --pink-hover: rgba(250, 100, 132, 0.7);
   --glow-full: rgba(250, 100, 132, 1);
   --glow-semi: rgba(250, 100, 132, 0.7);
   --glow-min: rgba(250, 100, 132, 0.5);
@@ -143,7 +144,7 @@ nav a {
   padding: 20px;
   margin-top: 20px;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto 200px;
   grid-gap: 5px;
   margin-left: 10%;
   margin-right: 10%;
@@ -254,6 +255,11 @@ img#logo {
 
 .button-book {
   background-color: var(--pink);
+  transition: background-color 0.5s ease;
+}
+
+.button-book:hover {
+  background-color: var(--pink-hover);
 }
 
 .button-mail {
@@ -308,6 +314,11 @@ footer {
       -ms-transform: scale(1);
 
           transform: scale(1); /*change scale(3) to scale(1)*/
+}
+
+.effect1-button-safari {
+  color: #fff;
+  text-decoration: none;
 }
 
 .effect1 .bg {
