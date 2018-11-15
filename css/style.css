@@ -130,7 +130,7 @@ nav a {
   z-index: -1;
 } */
 
-/* grid for the homepage */
+/* GRID for the homepage */
 
 /* generic container */
 .container {
@@ -140,11 +140,12 @@ nav a {
   grid-gap: 2px;
 }
 
+/* call to action container */
 .cta-container {
   padding: 20px;
   margin-top: 20px;
   display: grid;
-  grid-template-columns: auto 200px;
+  grid-template-columns: auto; /* Updated for mobile to show CTA button text */
   grid-gap: 5px;
   margin-left: 10%;
   margin-right: 10%;
@@ -231,7 +232,7 @@ img#logo {
 }
 
 .price {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .button-book, .button-mail {
