@@ -3,7 +3,11 @@
 
 // Browser detect
 
+var not_chrome = navigator.userAgent.indexOf('Chrome') === -1;
+var is_explorer = navigator.userAgent.indexOf('MSIE') > -1;
+var is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
 var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+var is_opera = navigator.userAgent.toLowerCase().indexOf("op") > -1;
 
 // ***** STICKY NAV ***** //
 const nav = document.querySelector('nav');
@@ -67,11 +71,14 @@ document.addEventListener("scroll", removeHighlight);
 
 (function() {
 
+  // {alert(is_safari)}
+  // {alert(!not_chrome)}
+
   const cssButton = document.querySelector('#css-button')
   const cssButtonLink = document.querySelector('#css-button a')
   // your page initialization code here
   // the DOM will be available here
-  if (window.innerWidth > 599 && !is_safari) {
+  if (window.innerWidth > 599 && !is_safari && not_chrome) {
     cssButton.classList.add('css-button');
     cssButtonLink.classList.add('effect1');
   } else {

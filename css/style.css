@@ -142,7 +142,7 @@ nav a {
 
 /* call to action container */
 .cta-container {
-  padding: 20px;
+  padding: 20px 0;
   margin-top: 20px;
   display: grid;
   grid-template-columns: auto; /* Updated for mobile to show CTA button text */
@@ -249,7 +249,7 @@ img#logo {
   color: #fff;
   -webkit-transition: opacity 0.2s ease-in;
   transition: opacity 0.2s ease-in;
-  padding: 0 30px;
+  /* padding: 0 30px; */
   width: 100%;
   cursor: pointer;
 }
@@ -257,6 +257,7 @@ img#logo {
 .button-book {
   background-color: var(--pink);
   transition: background-color 0.5s ease;
+  min-width: 175px;
 }
 
 .button-book:hover {
