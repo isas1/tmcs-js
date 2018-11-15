@@ -20,7 +20,7 @@ if (iframe) {
 }
 
 function fixNav() {
-  if (window.scrollY >= topOfNav + 20) {
+  if (window.scrollY >= topOfNav + 5) {
     document.body.style.paddingTop = `${nav.offsetHeight}px`;
     document.body.classList.add('fixed-nav');
     nav.classList.add('nav-trans');
