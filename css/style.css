@@ -1,16 +1,17 @@
 :root { /* CSS variables */
   --bg: #fff;
   --main: #fa6484;
+  --secondary: rgba(250, 100, 132, 0.9);
   --link: #0b0b8f;
   --linkSec: rgba(247, 183, 51, 0.7);
-  --sec: #ffb500;
+  --stars: #ffb500;
   --grey: #DFDCE3;
   --font: #333;
   --pink-hover: rgba(250, 100, 132, 0.7);
   --glow-full: rgba(250, 100, 132, 1);
   --glow-semi: rgba(250, 100, 132, 0.7);
   --glow-min: rgba(250, 100, 132, 0.5);
-  --button-mail: #4db24c;
+  --button-mail: #23AD39;
   --button-hover: #ffa4b8;
 }
 
@@ -45,7 +46,7 @@ nav {
 /* added when scrolls down */
 .nav-trans {
   opacity: 1;
-  background-color: var(--font);
+  background-color: var(--secondary);
   color: #333;
 }
 
@@ -150,7 +151,7 @@ nav a {
 /* call to action container */
 .cta-container {
   padding: 20px 0;
-  margin-top: 20px;
+  margin: 30px 0;
   display: grid;
   grid-template-columns: auto; /* Updated for mobile to show CTA button text */
   grid-gap: 5px;
@@ -169,12 +170,6 @@ nav a {
 h1 {
   text-align: center;
   color: var(--main);
-}
-
-h1.title {
-  color: white;
-  text-transform: uppercase;
-  font-size: 2em;
 }
 
 h2 {
@@ -217,8 +212,37 @@ section {
   position: relative;
   height: 100%;
   background-image: linear-gradient(var(--main), #fa8ba1);
-  border-bottom-left-radius: 50% 50%;
-  border-bottom-right-radius: 50% 50%;
+  /* border-bottom-left-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%; */
+}
+
+.section-reviews {
+  position: relative;
+  height: 100%;
+  background-image: linear-gradient(#fa8ba1, var(--main));
+  padding-bottom: 50px;
+  /* border-top-left-radius: 50% 50%;
+  border-top-right-radius: 50% 50%; */
+}
+
+h1.title, h1.title-reviews {
+  color: white;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+.title-reviews {
+  margin: 50px 0;
+}
+
+.reviews {
+  background-color: white;
+  border-radius: 20px;
+}
+
+.review-link {
+  text-decoration: none;
+  color: white;
 }
 
 img#logo {
@@ -233,7 +257,6 @@ img#logo {
 .mugshot {
   border-radius: 50%;
   border: var(--grey) 2px solid;
-  box-shadow: 5px 10px 10px white;
 }
 .location {
   font-size: 24px;
@@ -248,18 +271,8 @@ img#logo {
   font-size: 24px;
   display: inline;
   text-align: center;
-  color: white;
+  color: var(--stars);
   padding-bottom: 50px;
-}
-
-.reviews {
-  background-color: var(--grey);
-  border-radius: 20px;
-}
-
-.review-link {
-  text-decoration: none;
-  color: white;
 }
 
 /* .price {
@@ -306,8 +319,8 @@ img.active {
 }
 
 footer {
-  background-color: var(--font);
-  color: var(--grey);
+  background-color: var(--secondary);
+  color: rgba(0, 0, 0, 0.5);
   position: relative;
   text-align: right;
   padding: 20px;
@@ -332,13 +345,16 @@ footer {
 /* a */
 
 @media all and (max-width: 599) {
-  effect1 {
+  .effect1 {
     -webkit-transform: scale(1);
 
     -ms-transform: scale(1);
 
     transform: scale(1); /*change scale(3) to scale(1)*/
+  }
 
+  .button-book {
+    width: 100%;
   }
 }
 .effect1 {
@@ -394,6 +410,7 @@ footer {
   height: 100%;
   width: 100%;
   border-radius: 20px;
+  background-color: var(--button-mail);
   -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, -50%);
           transform: translate(0, -50%);
@@ -426,7 +443,8 @@ footer {
 
 .effect1:hover .bg:before,
 .effect1:hover .bg:after{
-  right: 0;
+  right: 30px;
+  background-color: var(--button-mail);
 }
 
 .effect1:hover .bg:before{
