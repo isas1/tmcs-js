@@ -34,7 +34,7 @@ body {
 
 /** STICK NAV **/
 nav {
-  background: var(--font);
+  background: var(--main);
   top: 0;
   width: 100%;
   transition: all 0.5s;
@@ -45,7 +45,7 @@ nav {
 /* added when scrolls down */
 .nav-trans {
   opacity: 1;
-  background-color: var(--main);
+  background-color: var(--font);
   color: #333;
 }
 
@@ -109,12 +109,12 @@ nav a {
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 0;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.01);
   left: 0;
   z-index: 1;
   border-radius: 20px;
   display: block;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.01);
   pointer-events: none;
 }
 
@@ -169,11 +169,12 @@ nav a {
 h1 {
   text-align: center;
   color: var(--main);
-  text-decoration: underline;
 }
 
 h1.title {
   color: white;
+  text-transform: uppercase;
+  font-size: 2em;
 }
 
 h2 {
@@ -215,7 +216,7 @@ section {
 .section-info {
   position: relative;
   height: 100%;
-  background-image: linear-gradient(#fa8ba1, var(--main));
+  background-image: linear-gradient(var(--main), #fa8ba1);
   border-bottom-left-radius: 50% 50%;
   border-bottom-right-radius: 50% 50%;
 }
@@ -244,11 +245,21 @@ img#logo {
 }
 
 .stars {
-  font-size: 18px;
+  font-size: 24px;
   display: inline;
   text-align: center;
   color: white;
   padding-bottom: 50px;
+}
+
+.reviews {
+  background-color: var(--grey);
+  border-radius: 20px;
+}
+
+.review-link {
+  text-decoration: none;
+  color: white;
 }
 
 /* .price {
