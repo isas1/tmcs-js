@@ -64,27 +64,35 @@ nav ul {
 }
 
 nav li {
-  flex: 1;
-  text-align: center;
   display: flex;
+  text-align: center;
   justify-content: center;
   align-items: center;
+}
+
+nav li.nav-link {
+  flex: 1;
+}
+
+nav li.nav-space {
+  flex: 4;
 }
 
 nav li a.a-nav:hover {
   font-size: 1.2em
 }
 
-li.logo {
+nav li.logo {
   max-width: 0;
   overflow: hidden;
   background: white;
   transition: all 0.5s;
   font-weight: 600;
   font-size: 30px;
+  flex: 1;
 }
 
-li.logo a {
+nav li.logo a {
   color: black;
 }
 
