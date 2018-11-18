@@ -75,11 +75,7 @@ nav li.nav-link {
 }
 
 nav li.nav-space {
-  flex: 4;
-}
-
-nav li a.a-nav:hover {
-  font-size: 1.2em
+  flex: 7;
 }
 
 nav li.logo {

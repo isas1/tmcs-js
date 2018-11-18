@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/logo-float.css">
+  <link rel="stylesheet" href="css/icons.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -18,8 +20,18 @@
     <ul>
       <li class="logo"><a href="#"><img id="logo" width="40" height="40" src="media/cslogo.png" alt="CS Logo"></a></li>
       <li class="nav-space"></li>
-      <li class="nav-link"><a class="a-nav" href="pages/about.html">About</a></li>
-      <li class="nav-link"><a class="a-nav" href="mailto:teachmecomputerscience@gmail.com">Email</a></li>
+      <!-- <li class="nav-link"><a class="a-nav" href="pages/about.html">About</a></li> -->
+      <li class="nav-link">
+        <a class="a-nav" href="pages/about.html">
+          <div class="profile icon"></div>
+        </a>
+      </li>
+      <li class="nav-link">
+        <a class="a-nav" href="mailto:teachmecomputerscience@gmail.com">
+          <div class="mail_square"></div>
+          <div class="mail_triangle"></div>
+        </a>
+      </li>
     </ul>
   </nav>
 
@@ -30,7 +42,7 @@
       <div class="container">
         <div class="avatar-container">
           <div class="item avatar">
-                <img src="media/mugshot.jpg" alt="Tutor logo" />
+            <img src="media/mugshot.jpg" alt="Tutor logo" />
           </div>
         </div>
         <!-- <div class="item"><img class="mugshot" src="media/mugshot.jpg" alt="Avatar of Sam" height="150px"></div> -->
@@ -41,25 +53,26 @@
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
-          <span><a class="review-link" href="https://www.superprof.co.uk/learn-code-create-fun-projects-with-qualified-computer-science-teacher-with-over-years-industry-experience.html">(5 reviews)</a></span></div>
+          <span><a class="review-link" href="https://www.superprof.co.uk/learn-code-create-fun-projects-with-qualified-computer-science-teacher-with-over-years-industry-experience.html">(5
+              reviews)</a></span></div>
       </div>
     </section>
-    
+
     <!-- CTA container -->
-      <div class="cta-container">
-        <!-- <span class="item price">£50/hr</span> -->
-        <!-- <div class="item"> <a href="https://www.superprof.co.uk/learn-code-create-fun-projects-with-qualified-computer-science-teacher-with-over-years-industry-experience.html">
+    <div class="cta-container">
+      <!-- <span class="item price">£50/hr</span> -->
+      <!-- <div class="item"> <a href="https://www.superprof.co.uk/learn-code-create-fun-projects-with-qualified-computer-science-teacher-with-over-years-industry-experience.html">
             <button class="button-book">Book a lesson</button></a></div> -->
-  
-        <div class="item">
-          <div id="css-button">
-            <a class="" href="https://www.superprof.co.uk/learn-code-create-fun-projects-with-qualified-computer-science-teacher-with-over-years-industry-experience.html">
-              Book a lesson
-              <span class="bg"></span>
-            </a>
-          </div>
+
+      <div class="item">
+        <div id="css-button">
+          <a class="" href="https://www.superprof.co.uk/learn-code-create-fun-projects-with-qualified-computer-science-teacher-with-over-years-industry-experience.html">
+            Book a lesson
+            <span class="bg"></span>
+          </a>
         </div>
       </div>
+    </div>
 
     <!-- <div class="item"> <a href="mailto:teachmecomputerscience@gmail.com"> <button class="button-mail">Email</button></a></div> -->
 
@@ -67,22 +80,39 @@
       <!-- Reviews -->
       <h1 class="title-reviews">Reviews</h1>
       <div class="container reviews">
-        <div class="item reviewer"><h2>Paul</h2> </div>
-        <div class="item company"><h3>Father of two students (aged 6 and 12)</h3></div>
-        <div class="item">The boys are very happy with how things are going —— when they found out that there were no lessons over half-term they were pretty upset — so i think that is a good indicator. </div>
+        <div class="item reviewer">
+          <h2>Paul</h2>
+        </div>
+        <div class="item company">
+          <h3>Father of two students (aged 6 and 12)</h3>
+        </div>
+        <div class="item">The boys are very happy with how things are going —— when they found out that there were no
+          lessons over half-term they were pretty upset — so i think that is a good indicator. </div>
       </div>
       <div class="container reviews">
-        <div class="item reviewer"><h2>John</h2> </div>
-        <div class="item company"><h3>Head of Computer Science - TES School of the Year 2016</h3></div>
+        <div class="item reviewer">
+          <h2>John</h2>
+        </div>
+        <div class="item company">
+          <h3>Head of Computer Science - TES School of the Year 2016</h3>
+        </div>
         <div class="item">Sam’s Computer subject knowledge and programming skills are excellent. Having worked with Sam
           as HOD at an outstanding school I feel that Sam was always professional and passionate to bring a positive
           vibe to learning. He has numerous resources to engage all abilities in a range of programming and theory
           topics. Highly recommended. </div>
       </div>
       <div class="container reviews">
-        <div class="item reviewer"><h2>Sulayman</h2> </div>
-        <div class="item company"><h3>International A-Level student</h3></div>
-        <div class="item">I've about ten hours of lessons with Sam now. I'm very happy - he's very helpful and knows how to explain the concepts very well. He is particularly good at the programming side and it seems it is his favorite part to teach. Sam is very thorough and makes sure you understand the concepts well. It makes a big difference to have a qualified teacher! I will continue to have regular lessons with him and would definitely recommend him. </div>
+        <div class="item reviewer">
+          <h2>Sulayman</h2>
+        </div>
+        <div class="item company">
+          <h3>International A-Level student</h3>
+        </div>
+        <div class="item">I've about ten hours of lessons with Sam now. I'm very happy - he's very helpful and knows
+          how to explain the concepts very well. He is particularly good at the programming side and it seems it is his
+          favorite part to teach. Sam is very thorough and makes sure you understand the concepts well. It makes a big
+          difference to have a qualified teacher! I will continue to have regular lessons with him and would definitely
+          recommend him. </div>
       </div>
     </section>
 

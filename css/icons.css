@@ -1,0 +1,115 @@
+:root {
+  --icon-colour: #fff;
+  --icon-colour-after: #000;
+  --transition-time: 0.5s;
+}
+
+/* MAIL ICON */
+
+.mail_square {
+  width: 0px;
+  height: 0px;
+  border-right: 20px solid var(--icon-colour);
+  border-left: 20px solid var(--icon-colour);
+  border-top: 20px solid transparent;
+  border-bottom: 6px solid var(--icon-colour);
+
+}
+
+.mail_triangle {
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-top: 20px solid var(--icon-colour);
+  border-bottom: 10px solid transparent;
+  margin-top: -30px;
+  transition: all 0.5s;
+}
+
+.mail_triangle:hover {
+  border-top: 10px solid var(--icon-colour);
+}
+
+/* HOME ICON */
+
+.home_square {
+  width: 33px;
+  height: 22.5px;
+  margin-top: 12px;
+  background-color: var(--icon-colour);
+  /* position:absolute; */
+  transition: all var(--transition-time);
+}
+
+.home_square:before {
+  content: "";
+  margin-left: -22.5px;
+  margin-top: -28.5px;
+  border-right: 22.5px solid transparent;
+  border-bottom: 18px solid var(--icon-colour);
+  border-top: 13.5px solid transparent;
+  border-left: 22.5px solid transparent;
+  position: absolute;
+  transition: all var(--transition-time);
+}
+
+.home_square1 {
+  width: 6px;
+  height: 9px;
+  background-color: var(--icon-colour);
+  margin-top: -33px;
+  position: absolute;
+  transition: all var(--transition-time);
+}
+
+nav li a.a-nav:hover .home_square {
+  font-size: 1.2em;
+  background-color: var(--icon-colour-after);
+}
+
+nav li a.a-nav:hover .home_square1 {
+  font-size: 1.2em;
+  background-color: var(--icon-colour-after);
+}
+
+nav li a.a-nav:hover .home_square:before {
+  font-size: 1.2em;
+  border-bottom: 18px solid var(--icon-colour-after);
+}
+
+/* ABOUT ICON */
+
+/* shoulders */
+.profile.icon {
+  width: 27px;
+  height: 18px;
+  border-left: solid 1px #fff;
+  border-right: solid 1px #fff;
+  border-top: solid 1px #fff;
+  border-bottom: solid 1px #fff;
+  border-radius: 12px 12px 0 0;
+  background-color: #fff;
+}
+
+/* all */
+.icon {
+  top: 10px;
+  position: relative;
+}
+
+/* head */
+.profile.icon::before {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: solid 1px #fff;
+  background-color: #fff;
+  position: absolute;
+  left: 1px;
+  top: -25px;
+  /* background-color: white; */
+
+}
+
+.icon::before, .icon::after {
+  content: '';
+}
