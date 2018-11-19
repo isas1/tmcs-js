@@ -1,6 +1,6 @@
 :root {
-  --icon-colour: #fff;
-  --icon-colour-after: #000;
+  --icon-colour: rgba(255, 255, 255, 0.3);
+  --icon-colour-after: rgba(255, 255, 255, 0.5);
   --transition-time: 0.5s;
 }
 
@@ -22,28 +22,30 @@
   border-top: 20px solid var(--icon-colour);
   border-bottom: 10px solid transparent;
   margin-top: -30px;
-  transition: all 0.5s;
+  transition: all var(--transition-time);
 }
 
-.mail_triangle:hover {
-  border-top: 10px solid var(--icon-colour);
+nav li a.a-nav:hover .mail_triangle {
+  border-top: 10px solid var(--icon-colour-after);
 }
 
 /* HOME ICON */
 
+/* house */
 .home_square {
   width: 33px;
   height: 22.5px;
-  margin-top: 12px;
+  margin-top: 10px;
   background-color: var(--icon-colour);
   /* position:absolute; */
   transition: all var(--transition-time);
 }
 
+/* roof */
 .home_square:before {
   content: "";
   margin-left: -22.5px;
-  margin-top: -28.5px;
+  margin-top: -31.5px;
   border-right: 22.5px solid transparent;
   border-bottom: 18px solid var(--icon-colour);
   border-top: 13.5px solid transparent;
@@ -52,28 +54,36 @@
   transition: all var(--transition-time);
 }
 
+/* chimney
 .home_square1 {
   width: 6px;
   height: 9px;
+  transform: rotateX(90deg);
   background-color: var(--icon-colour);
   margin-top: -33px;
   position: absolute;
   transition: all var(--transition-time);
-}
+} */
+
+/* HOME ICON :hover */
 
 nav li a.a-nav:hover .home_square {
-  font-size: 1.2em;
   background-color: var(--icon-colour-after);
 }
 
-nav li a.a-nav:hover .home_square1 {
-  font-size: 1.2em;
+/* nav li a.a-nav:hover .home_square1 {
   background-color: var(--icon-colour-after);
-}
+} */
 
 nav li a.a-nav:hover .home_square:before {
-  font-size: 1.2em;
   border-bottom: 18px solid var(--icon-colour-after);
+  margin-left: -22.5px;
+  margin-top: -33px;
+  border-right: 22.5px solid transparent;
+  border-top: 13.5px solid transparent;
+  border-left: 22.5px solid transparent;
+  position: absolute;
+  transition: all var(--transition-time);
 }
 
 /* ABOUT ICON */
@@ -82,12 +92,13 @@ nav li a.a-nav:hover .home_square:before {
 .profile.icon {
   width: 27px;
   height: 18px;
-  border-left: solid 1px #fff;
-  border-right: solid 1px #fff;
-  border-top: solid 1px #fff;
-  border-bottom: solid 1px #fff;
+  border-left: solid 1px var(--icon-colour);
+  border-right: solid 1px var(--icon-colour);
+  border-top: solid 1px var(--icon-colour);
+  border-bottom: solid 1px var(--icon-colour);
   border-radius: 12px 12px 0 0;
-  background-color: #fff;
+  background-color: var(--icon-colour);
+  transition: all var(--transition-time);
 }
 
 /* all */
@@ -101,15 +112,38 @@ nav li a.a-nav:hover .home_square:before {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  border: solid 1px #fff;
-  background-color: #fff;
+  border: solid 1px var(--icon-colour);
+  background-color: var(--icon-colour);
   position: absolute;
   left: 1px;
   top: -25px;
   /* background-color: white; */
-
+  transition: all var(--transition-time);
 }
 
-.icon::before, .icon::after {
+.icon::before,
+.icon::after {
   content: '';
+}
+
+/* ABOUT ICON :hover */
+
+/* shoulder hover */
+
+nav li a.a-nav:hover .profile.icon {
+  width: 36px;
+  border-left: solid 1px var(--icon-colour-after);
+  border-right: solid 1px var(--icon-colour-after);
+  border-top: solid 1px var(--icon-colour-after);
+  border-bottom: solid 1px var(--icon-colour-after);
+  border-radius: 12px 12px 0 0;
+  background-color: var(--icon-colour-after);
+}
+
+/* head hover */
+
+nav li a.a-nav:hover .profile.icon::before {
+  border: solid 1px var(--icon-colour-after);
+  background-color: var(--icon-colour-after);
+  left: 5px;
 }
