@@ -51,6 +51,7 @@ nav li a.a-nav:hover .mail_triangle {
   border-top: 13.5px solid transparent;
   border-left: 22.5px solid transparent;
   position: absolute;
+  /* -webkit-transition: all var(--transition-time); Safari */
   transition: all var(--transition-time);
 }
 
@@ -77,13 +78,12 @@ nav li a.a-nav:hover .home_square {
 
 nav li a.a-nav:hover .home_square:before {
   border-bottom: 18px solid var(--icon-colour-after);
-  margin-left: -22.5px;
+  /* margin-left: -22.5px;
   margin-top: -33px;
   border-right: 22.5px solid transparent;
   border-top: 13.5px solid transparent;
   border-left: 22.5px solid transparent;
-  position: absolute;
-  transition: all var(--transition-time);
+  position: absolute; */
 }
 
 /* ABOUT ICON */
