@@ -1,0 +1,151 @@
+:root {
+  --icon-colour: rgba(255, 255, 255, 0.3);
+  --icon-colour-after: rgba(255, 255, 255, 0.5);
+  --transition-time: 0.5s;
+}
+
+/* MAIL ICON */
+
+.mail_square {
+  width: 0px;
+  height: 0px;
+  border-right: 20px solid var(--icon-colour);
+  border-left: 20px solid var(--icon-colour);
+  border-top: 20px solid transparent;
+  border-bottom: 6px solid var(--icon-colour);
+}
+
+.mail_triangle {
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-top: 20px solid var(--icon-colour);
+  border-bottom: 10px solid transparent;
+  margin-top: -30px;
+  transition: all var(--transition-time);
+}
+
+nav li a.a-nav:hover .mail_triangle {
+  border-top: 10px solid var(--icon-colour-after);
+}
+
+/* HOME ICON */
+
+/* house */
+
+.home_square {
+  width: 33px;
+  height: 22.5px;
+  margin-top: 10px;
+  background-color: var(--icon-colour);
+  /* position:absolute; */
+  transition: all var(--transition-time);
+  &:before {
+    content: "";
+    margin-left: -22.5px;
+    margin-top: -31.5px;
+    border-right: 22.5px solid transparent;
+    border-bottom: 18px solid var(--icon-colour);
+    border-top: 13.5px solid transparent;
+    border-left: 22.5px solid transparent;
+    position: absolute;
+    /* -webkit-transition: all var(--transition-time); Safari */
+    transition: all var(--transition-time);
+  }
+}
+
+/* roof */
+
+/* chimney
+.home_square1 {
+  width: 6px;
+  height: 9px;
+  transform: rotateX(90deg);
+  background-color: var(--icon-colour);
+  margin-top: -33px;
+  position: absolute;
+  transition: all var(--transition-time);
+} */
+
+/* HOME ICON :hover */
+
+nav li a.a-nav:hover .home_square {
+  background-color: var(--icon-colour-after);
+  &:before {
+    border-bottom: 18px solid var(--icon-colour-after);
+    /* margin-left: -22.5px;
+    margin-top: -33px;
+    border-right: 22.5px solid transparent;
+    border-top: 13.5px solid transparent;
+    border-left: 22.5px solid transparent;
+    position: absolute; */
+  }
+}
+
+/* nav li a.a-nav:hover .home_square1 {
+  background-color: var(--icon-colour-after);
+} */
+
+/* ABOUT ICON */
+
+/* shoulders */
+
+.profile.icon {
+  width: 27px;
+  height: 18px;
+  border-left: solid 1px var(--icon-colour);
+  border-right: solid 1px var(--icon-colour);
+  border-top: solid 1px var(--icon-colour);
+  border-bottom: solid 1px var(--icon-colour);
+  border-radius: 12px 12px 0 0;
+  background-color: var(--icon-colour);
+  transition: all var(--transition-time);
+}
+
+/* all */
+
+.icon {
+  top: 10px;
+  position: relative;
+}
+
+/* head */
+
+.profile.icon::before {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: solid 1px var(--icon-colour);
+  background-color: var(--icon-colour);
+  position: absolute;
+  left: 1px;
+  top: -25px;
+  /* background-color: white; */
+  transition: all var(--transition-time);
+}
+
+.icon {
+  &::before, &::after {
+    content: '';
+  }
+}
+
+/* ABOUT ICON :hover */
+
+/* shoulder hover */
+
+nav li a.a-nav:hover .profile.icon {
+  width: 36px;
+  border-left: solid 1px var(--icon-colour-after);
+  border-right: solid 1px var(--icon-colour-after);
+  border-top: solid 1px var(--icon-colour-after);
+  border-bottom: solid 1px var(--icon-colour-after);
+  border-radius: 12px 12px 0 0;
+  background-color: var(--icon-colour-after);
+  &::before {
+    border: solid 1px var(--icon-colour-after);
+    background-color: var(--icon-colour-after);
+    left: 5px;
+  }
+}
+
+/* head hover */
